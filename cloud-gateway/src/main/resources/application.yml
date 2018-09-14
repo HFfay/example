@@ -2,13 +2,13 @@
 spring:
   application:
     name: spring-cloud-gateway
-  cloud:        # spring cloud gateway Â·ÓÉÅäÖÃ·½Ê½
+  cloud:        # spring cloud gateway è·¯ç”±é…ç½®æ–¹å¼
     gateway:
-      discovery:      #ÊÇ·ñÓë·şÎñ·¢ÏÖ×é¼ş½øĞĞ½áºÏ£¬Í¨¹ı serviceId(±ØĞëÉèÖÃ³É´óĞ´) ×ª·¢µ½¾ßÌåµÄ·şÎñÊµÀı¡£Ä¬ÈÏÎªfalse£¬ÉèÎªtrue±ã¿ªÆôÍ¨¹ı·şÎñÖĞĞÄµÄ×Ô¶¯¸ù¾İ serviceId ´´½¨Â·ÓÉµÄ¹¦ÄÜ¡£
-        locator:      #Â·ÓÉ·ÃÎÊ·½Ê½£ºhttp://Gateway_HOST:Gateway_PORT/´óĞ´µÄserviceId/**£¬ÆäÖĞÎ¢·şÎñÓ¦ÓÃÃûÄ¬ÈÏ´óĞ´·ÃÎÊ¡£
+      discovery:      #æ˜¯å¦ä¸æœåŠ¡å‘ç°ç»„ä»¶è¿›è¡Œç»“åˆï¼Œé€šè¿‡ serviceId(å¿…é¡»è®¾ç½®æˆå¤§å†™) è½¬å‘åˆ°å…·ä½“çš„æœåŠ¡å®ä¾‹ã€‚é»˜è®¤ä¸ºfalseï¼Œè®¾ä¸ºtrueä¾¿å¼€å¯é€šè¿‡æœåŠ¡ä¸­å¿ƒçš„è‡ªåŠ¨æ ¹æ® serviceId åˆ›å»ºè·¯ç”±çš„åŠŸèƒ½ã€‚
+        locator:      #è·¯ç”±è®¿é—®æ–¹å¼ï¼šhttp://Gateway_HOST:Gateway_PORT/å¤§å†™çš„serviceId/**ï¼Œå…¶ä¸­å¾®æœåŠ¡åº”ç”¨åé»˜è®¤å¤§å†™è®¿é—®ã€‚
           enabled: true
       routes:
-      - id: 163                     #Íø¹ØÂ·ÓÉµ½ÍøÒ×¹ÙÍø
+      - id: 163                     #ç½‘å…³è·¯ç”±åˆ°ç½‘æ˜“å®˜ç½‘
         uri: http://www.163.com/
         predicates:
         - Path=/163/**
