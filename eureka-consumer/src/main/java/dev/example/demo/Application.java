@@ -1,5 +1,6 @@
 package dev.example.demo;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
@@ -23,9 +24,12 @@ public class Application {
     @Autowired
     RemoteService remoteService;
 
+    @Value("${server.port}")
+    String port;
+
     @RequestMapping("/hello")
     public String hello(@RequestParam String name) {
-        return remoteService.hello(name);
+        return "hear is " + port + ", I got [ " + remoteService.hello(name) + " ]";
     }
 
 
