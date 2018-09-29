@@ -1,0 +1,17 @@
+
+spring:
+  application:
+    name: cloud-server
+
+server:
+  port: 8090
+
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    serviceUrl.defaultZone: http://localhost:${server.port}/eureka/
+#  server:
+#    enable-self-preservation: false         # 设为false，关闭自我保护(自我保护时，不会注销任何微服务)
+#    eviction-interval-timer-in-ms: 4000     # 清理间隔（单位毫秒，默认是60*1000）
